@@ -1,4 +1,4 @@
-# Minting API with thirdweb Engine
+# Airdrop NFTs with thirdweb Engine
 
 This guide shows how thirdweb Engine can be used by a brand to mint free NFTs for their superfans.
 

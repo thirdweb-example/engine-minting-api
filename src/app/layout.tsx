@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Minting API with thirdweb Engine",
+  title: "Airdrop NFTs with thirdweb Engine",
 };
 
 export default function RootLayout({
