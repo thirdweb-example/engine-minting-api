@@ -25,20 +25,22 @@ function ClaimPage() {
       body: JSON.stringify({ userWalletAddress }),
     });
     if (resp.ok) {
-    } else {
+      alert(`🎉 A reward has been sent to your wallet: ${userWalletAddress}`);
     }
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h2 className="">Claim your reward</h2>
+    <main className="flex flex-col gap-y-8 items-center p-24">
+      <h2 className="text-4xl font-extrabold">
+        Thank you for being a superfan! ❤️
+      </h2>
       <ConnectWallet />
       {userWalletAddress && (
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg"
+          className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-lg"
           onClick={onClick}
         >
-          Claim
+          Claim my reward
         </button>
       )}
     </main>

@@ -1,51 +1,23 @@
-# thirdweb Engine - Minting API Demo
+# Airdrop NFTs with thirdweb Engine
 
----
+This guide shows how thirdweb Engine can be used by a brand to mint free NFTs for their superfans.
 
 ## Instructions
 
-1. Deploy Engine and host it on `ENGINE_URL`.
+[Read the full guide](https://portal.thirdweb.com/guides/engine/airdrop-nfts)
 
-1. Create or import a backend wallet.
+Create a `.env.local` file and provide details of your project.
 
-   ```bash
-   curl -X POST \
-       -H "Content-Type: application/json" \
-       -H "Authorization: Bearer <THIRDWEB_SECRET_KEY>" \
-       -d '{ "privateKey": "01ab..." }' \
-       "https://<ENGINE_URL>/backend-wallet/import"
-   ```
+```bash
+ENGINE_URL=https://...
+THIRDWEB_CLIENT_ID=0123...
+THIRDWEB_SECRET_KEY=AaBb...
+BACKEND_WALLET_ADDRESS=0x...
+NFT_CONTRACT_ADDRESS=0x...
+```
 
-1. Send gas funds to the backend wallet.
+Start the server with favorite package manager.
 
-1. Deploy a [thirdweb Edition Drop](https://thirdweb.com/thirdweb.eth/DropERC1155) contract and update the claim condition to allow minting.
-
-   ```bash
-    curl -X POST \
-        -H "Content-Type: application/json" \
-        -H "Authorization: Bearer <THIRDWEB_SECRET_KEY>" \
-        -H "x-backend-wallet-address: <BACKEND_WALLET_ADDRESS>" \
-        -d '{
-            "contractMetadata": {
-                "name": "Acme Loyalty Card",
-                "symbol": "ALC",
-                "primary_sale_recipient": "<BACKEND_WALLET_ADDRESS>"
-            }
-        }' \
-        "https://<ENGINE_URL>/deploy/mumbai/prebuilds/edition-drop"
-   ```
-
-1. Update the `.env` file.
-
-   ```env
-   EDITION_DROP_CONTRACT_ADDRESS=0x...
-   ENGINE_URL=https://...
-   THIRDWEB_CLIENT_ID=0123...
-   THIRDWEB_SECRET_KEY=AaBb...
-   ```
-
-1. Start the server locally.
-
-   ```bash
-   bun dev
-   ```
+```bash
+bun dev
+```
