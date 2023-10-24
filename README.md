@@ -4,7 +4,7 @@ This guide shows how thirdweb Engine can be used by a brand to mint free NFTs fo
 
 ## Instructions
 
-[Read the full guide](https://portal.thirdweb.com/guides/engine/airdrop-nfts)
+[Read the full guide](https://portal.thirdweb.com/guides/engine/airdrop-nfts/)
 
 Create a `.env.local` file and provide details of your project.
 
